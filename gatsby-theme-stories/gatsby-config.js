@@ -1,10 +1,18 @@
-module.exports = ({ contentPath = "content" }) => ({
+module.exports = ({ contentPath = "content", assetPath = "assets" }) => ({
   plugins: [
     `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "posts",
         path: contentPath,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: assetPath,
       },
     },
     {

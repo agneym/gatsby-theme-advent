@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 import Layout from "../components/Layout";
+import Cover from "../components/Cover";
 
 const pageQuery = graphql`
   query getAllPosts {
@@ -28,7 +29,7 @@ function Landing() {
   console.log(edges);
   return (
     <Layout>
-      <p>Landing page</p>
+      <Cover />
     </Layout>
   );
 }
