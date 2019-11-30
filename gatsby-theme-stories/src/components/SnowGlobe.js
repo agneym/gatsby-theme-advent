@@ -1,6 +1,17 @@
-import React, { memo } from "react";
+import React, { memo, useRef } from "react";
+import { useSpring, animated } from "react-spring";
 
 function SnowGlobe() {
+  const containerRef = useRef(null);
+  const calc = (x, y) => [
+    x - containerRef.current.clientWidth,
+    y - containerRef.current.clientHeight,
+  ];
+  const trans = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
+  const [props, set] = useSpring(() => ({
+    xy: [0, 0],
+    config: { mass: 10, tension: 550, friction: 140 },
+  }));
   return (
     <div
       css={`
@@ -12,6 +23,8 @@ function SnowGlobe() {
         align-items: center;
         width: 60%;
       `}
+      ref={containerRef}
+      onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -19,6 +32,9 @@ function SnowGlobe() {
         y="0"
         enableBackground="new 0 0 512 512"
         viewBox="0 0 512 512"
+        css={`
+          width: 100%;
+        `}
       >
         <path
           fill="#C9E9F4"
@@ -33,12 +49,14 @@ function SnowGlobe() {
               repeatCount="indefinite"
               to="400"
             ></animate>
+          </circle>
+          <circle cx="204.02" r="8.935">
             <animate
-              attributeName="fill-opacity"
-              dur="8s"
-              keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;"
+              attributeName="cy"
+              dur="10.5s"
+              from="0"
               repeatCount="indefinite"
-              values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0"
+              to="400"
             ></animate>
           </circle>
           <circle cx="364.868" r="8.935">
@@ -49,13 +67,6 @@ function SnowGlobe() {
               repeatCount="indefinite"
               to="400"
             ></animate>
-            <animate
-              attributeName="fill-opacity"
-              dur="8s"
-              keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;"
-              repeatCount="indefinite"
-              values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0"
-            ></animate>
           </circle>
           <circle cx="136.359" r="6.935">
             <animate
@@ -64,13 +75,6 @@ function SnowGlobe() {
               from="0"
               repeatCount="indefinite"
               to="400"
-            ></animate>
-            <animate
-              attributeName="fill-opacity"
-              dur="8s"
-              keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;"
-              repeatCount="indefinite"
-              values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0"
             ></animate>
           </circle>
           <circle cx="420.916" r="10.935">
@@ -81,13 +85,6 @@ function SnowGlobe() {
               repeatCount="indefinite"
               to="400"
             ></animate>
-            <animate
-              attributeName="fill-opacity"
-              dur="7.5s"
-              keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;"
-              repeatCount="indefinite"
-              values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0"
-            ></animate>
           </circle>
           <circle cx="390.74" r="7.935">
             <animate
@@ -96,13 +93,6 @@ function SnowGlobe() {
               from="0"
               repeatCount="indefinite"
               to="400"
-            ></animate>
-            <animate
-              attributeName="fill-opacity"
-              dur="8s"
-              keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;"
-              repeatCount="indefinite"
-              values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0"
             ></animate>
           </circle>
           <circle cx="95.399" r="4.935">
@@ -113,13 +103,6 @@ function SnowGlobe() {
               repeatCount="indefinite"
               to="400"
             ></animate>
-            <animate
-              attributeName="fill-opacity"
-              dur="8s"
-              keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;"
-              repeatCount="indefinite"
-              values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0"
-            ></animate>
           </circle>
           <circle cx="405.399" r="4.935">
             <animate
@@ -128,13 +111,6 @@ function SnowGlobe() {
               from="0"
               repeatCount="indefinite"
               to="400"
-            ></animate>
-            <animate
-              attributeName="fill-opacity"
-              dur="8s"
-              keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;"
-              repeatCount="indefinite"
-              values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0"
             ></animate>
           </circle>
           <circle cx="305.399" r="6.935">
@@ -145,13 +121,6 @@ function SnowGlobe() {
               repeatCount="indefinite"
               to="400"
             ></animate>
-            <animate
-              attributeName="fill-opacity"
-              dur="8s"
-              keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;"
-              repeatCount="indefinite"
-              values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0"
-            ></animate>
           </circle>
           <circle cx="405.399" r="7.935">
             <animate
@@ -160,13 +129,6 @@ function SnowGlobe() {
               from="0"
               repeatCount="indefinite"
               to="400"
-            ></animate>
-            <animate
-              attributeName="fill-opacity"
-              dur="8s"
-              keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;"
-              repeatCount="indefinite"
-              values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0"
             ></animate>
           </circle>
           <path d="M153.135 369.316c0 21.995 6.916 42.374 18.688 59.092h168.355c11.772-16.718 18.688-37.097 18.688-59.092 0-38.02-20.704-71.141-51.411-88.935 17.448-14.668 28.555-36.621 28.555-61.194 0-44.165-35.818-79.964-80.008-79.964-44.193 0-80.011 35.8-80.011 79.964 0 24.575 11.107 46.526 28.559 61.194-30.712 17.794-51.415 50.915-51.415 88.935z"></path>
@@ -182,9 +144,12 @@ function SnowGlobe() {
           d="M73.107 229.286c0-118.787 90.373-216.467 206.155-228.119A232.207 232.207 0 00256 0C129.292 0 26.583 102.651 26.583 229.286c0 126.637 102.708 229.288 229.417 229.288 7.853 0 15.612-.397 23.263-1.166C163.481 445.757 73.107 348.074 73.107 229.286z"
           opacity="0.1"
         ></path>
-        <g fill="#636052">
+        <animated.g
+          fill="#636052"
+          style={{ transform: props.xy.interpolate(trans) }}
+        >
           <path d="M233.814 216.466c0 4.673-3.774 8.463-8.431 8.463-4.656 0-8.43-3.79-8.43-8.463 0-4.673 3.774-8.463 8.43-8.463 4.655.001 8.431 3.79 8.431 8.463zM295.049 216.466c0 4.673-3.774 8.463-8.429 8.463-4.656 0-8.431-3.79-8.431-8.463 0-4.673 3.775-8.463 8.431-8.463 4.655.001 8.429 3.79 8.429 8.463z"></path>
-        </g>
+        </animated.g>
         <path
           fill="#EF6B3A"
           d="M272.041 235.435c0 8.082-6.53 14.636-14.582 14.636-8.055 0-14.584-6.553-14.584-14.636 0-8.084 6.529-14.637 14.584-14.637 8.052 0 14.582 6.553 14.582 14.637z"
