@@ -21,7 +21,7 @@ module.exports = {
       options: {},
     },
   ],
-}
+};
 ```
 
 That's it, you can now run your gatsby site using
@@ -35,9 +35,9 @@ resources error. Create a simple page in `src/pages/index.js` to see a
 page on the root url.
 
 ```javascript
-import React from "react"
+import React from "react";
 
-export default () => <div>My Site!</div>
+export default () => <div>My Site!</div>;
 ```
 
 ## Doing more with themes
