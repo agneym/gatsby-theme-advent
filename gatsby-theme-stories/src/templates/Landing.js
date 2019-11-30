@@ -25,6 +25,7 @@ const pageQuery = graphql`
 function Landing() {
   const data = useStaticQuery(pageQuery);
   const edges = data.allMarkdownRemark.edges;
+  console.log(edges);
   return (
     <Layout>
       <p>Landing page</p>

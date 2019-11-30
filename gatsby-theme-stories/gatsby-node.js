@@ -49,11 +49,13 @@ exports.createPages = async ({ actions, graphql, reporter }, options) => {
           index === posts.length - 1 ? null : posts[index + 1].node;
         const next = index === 0 ? null : posts[index - 1].node;
 
+        const path = basePath + post.node.fields.slug;
+
         actions.createPage({
-          path: post.node.fields.slug,
+          path,
           component: PostTemplate,
           context: {
-            slug: post.node.fields.slug,
+            slug: path,
             previous,
             next,
           },
@@ -62,16 +64,4 @@ exports.createPages = async ({ actions, graphql, reporter }, options) => {
     });
     resolve(result);
   });
-};
-
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    });
-  }
 };
