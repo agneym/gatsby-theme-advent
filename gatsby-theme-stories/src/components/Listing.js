@@ -32,7 +32,7 @@ function Listing({ data }) {
         <UnlockedChapter key={node.fields.slug} node={node} num={index + 1} />
       ))}
       {lockedCards.map(cardNum => (
-        <LockedCard num={cardNum} />
+        <LockedCard key={cardNum} num={cardNum} />
       ))}
       <SnowGlobe />
     </Container>
