@@ -1,6 +1,7 @@
 const colors = {
   white: "#ffffff",
   red: "#ff0012",
+  darkGreen: "#00B32C",
 };
 
 const theme = {
@@ -13,7 +14,8 @@ const theme = {
   },
   listing: {
     unlocked: {
-      color: colors.red,
+      frontColor: colors.red,
+      backColor: colors.darkGreen,
     },
   },
 };

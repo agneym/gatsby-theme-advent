@@ -25,6 +25,7 @@ const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     position: relative;
     font-size: 1.6rem;
+    box-sizing: border-box;
   }
 
   h1, h2, h3, h4, h5, h6 {
