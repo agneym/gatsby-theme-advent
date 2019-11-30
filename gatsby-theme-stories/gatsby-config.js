@@ -26,6 +26,8 @@ module.exports = ({ contentPath = "content" }) => ({
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-embed-video`,
+          `gatsby-remark-external-links`,
         ],
       },
     },
