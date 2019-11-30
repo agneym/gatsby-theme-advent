@@ -4,7 +4,30 @@
   "main": "index.js",
   "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
   "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "clean": "gatsby clean"
+  },
   "peerDependencies": {
-    "gatsby": "^2.6.0"
+    "gatsby": "^2.6.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "dependencies": {
+    "gatsby-plugin-styled-components": "^3.1.14",
+    "gatsby-remark-copy-linked-files": "^2.1.31",
+    "gatsby-remark-images": "^3.1.34",
+    "gatsby-remark-prismjs": "^3.3.25",
+    "gatsby-remark-responsive-iframe": "^2.2.28",
+    "gatsby-remark-smartypants": "^2.1.17",
+    "gatsby-source-filesystem": "^2.1.39",
+    "gatsby-transformer-remark": "^2.6.38",
+    "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "gatsby": "^2.18.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   }
 }
