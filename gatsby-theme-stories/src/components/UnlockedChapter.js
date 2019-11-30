@@ -69,7 +69,6 @@ function UnlockedChapter({ node, num }) {
               {num}
             </AnimatedContent>
             <AnimatedContent
-              class="c back"
               style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
               side="back"
             >

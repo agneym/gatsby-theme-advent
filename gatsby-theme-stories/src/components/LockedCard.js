@@ -1,7 +1,7 @@
 import React from "react";
 
-function LockedCard() {
-  return <p>Locked Card</p>;
+function LockedCard({ num }) {
+  return <p>Locked Card {num}</p>;
 }
 
 export default LockedCard;
