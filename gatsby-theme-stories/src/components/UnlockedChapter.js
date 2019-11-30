@@ -5,38 +5,16 @@ import { Link } from "gatsby";
 import { Location } from "@reach/router";
 import { useSpring, animated } from "react-spring";
 
+import Card from "./Card";
+
 const Container = styled.div`
   position: relative;
   height: 100%;
 `;
 
-const Content = styled.article`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.07) 0px 1px 2px 0px;
-  border-radius: 6px;
-  box-sizing: border-box;
-
-  ${props =>
-    props.side === "back" &&
-    `
-    padding: 4rem;
-    font-size: 1.8rem;
-    text-align: justify;
-    color: ${props.theme.listing.unlocked.backColor};
-  `}
-`;
-
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: ${props => props.theme.listing.unlocked.frontColor};
-  font-size: 4rem;
 `;
 
 function UnlockedChapter({ node, num }) {
@@ -46,7 +24,7 @@ function UnlockedChapter({ node, num }) {
     transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
     config: { mass: 10, tension: 600, friction: 100 },
   });
-  const AnimatedContent = animated(Content);
+  const AnimatedContent = animated(Card);
   return (
     <Location>
       {({ location }) => (

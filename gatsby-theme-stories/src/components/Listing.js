@@ -3,13 +3,14 @@ import styled from "styled-components";
 
 import UnlockedChapter from "./UnlockedChapter";
 import LockedCard from "./LockedCard";
+import SnowGlobe from "./SnowGlobe";
 
 const Container = styled.main`
   width: 80%;
   margin: 5rem auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 25rem;
+  grid-auto-rows: 25rem;
   grid-gap: 2.5rem 5rem;
 `;
 
@@ -33,6 +34,7 @@ function Listing({ data }) {
       {lockedCards.map(cardNum => (
         <LockedCard num={cardNum} />
       ))}
+      <SnowGlobe />
     </Container>
   );
 }
