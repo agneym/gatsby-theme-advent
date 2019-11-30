@@ -4,8 +4,13 @@ const colors = {
   darkGreen: "#00B32C",
 };
 
+const fonts = {
+  display: "'system'",
+  heading: "'Aleo', serif",
+};
+
 const theme = {
-  fonts: {},
+  fonts,
   colors,
   cover: {
     color: colors.white,

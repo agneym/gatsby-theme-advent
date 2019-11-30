@@ -17,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'system';
+    font-family: ${props => props.theme.fonts.system};
     margin: 0;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -29,7 +29,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Aleo', serif;
+    font-family: ${props => props.theme.fonts.heading};
   }
 
   h2 {
