@@ -1,6 +1,8 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
+import Layout from "../components/Layout";
+
 const pageQuery = graphql`
   query getAllPosts {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
@@ -23,7 +25,11 @@ const pageQuery = graphql`
 function Landing() {
   const data = useStaticQuery(pageQuery);
   const edges = data.allMarkdownRemark.edges;
-  return <p>Landing page</p>;
+  return (
+    <Layout>
+      <p>Landing page</p>
+    </Layout>
+  );
 }
 
 export default Landing;
