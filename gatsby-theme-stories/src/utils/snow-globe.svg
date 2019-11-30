@@ -3,12 +3,78 @@
 <path style="fill:#C9E9F4;" d="M485.417,229.286c0,126.637-102.709,229.288-229.417,229.288
 	c-126.708,0-229.417-102.651-229.417-229.288C26.583,102.651,129.292,0,256,0C382.707,0,485.417,102.651,485.417,229.286z"/>
 <g>
-	<circle style="fill:#FFFFFF;" cx="104.02" cy="185.396" r="12.935"/>
-	<circle style="fill:#FFFFFF;" cx="364.868" cy="260.848" r="12.935"/>
-	<circle style="fill:#FFFFFF;" cx="136.359" cy="256.543" r="12.935"/>
-	<circle style="fill:#FFFFFF;" cx="420.916" cy="224.204" r="12.935"/>
-	<circle style="fill:#FFFFFF;" cx="390.74" cy="316.897" r="12.935"/>
-	<circle style="fill:#FFFFFF;" cx="95.399" cy="309.352" r="12.935"/>
+	<circle style="fill:#FFFFFF;" cx="104.02" r="12.935">
+		<animate dur="8s" repeatCount="indefinite"
+			from="0" to="400" attributeName="cy"
+		/>
+		<animate dur="8s" repeatCount="indefinite"
+			values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0" keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;" attributeName="fill-opacity"
+		/>
+	</circle>
+	<circle style="fill:#FFFFFF;" cx="364.868" r="8.935">
+		<animate dur="6s" repeatCount="indefinite"
+			from="0" to="400" attributeName="cy"
+		/>
+		<animate dur="8s" repeatCount="indefinite"
+			values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0" keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;" attributeName="fill-opacity"
+		/>
+	</circle>
+	<circle style="fill:#FFFFFF;" cx="136.359" r="6.935">
+		<animate dur="4s" repeatCount="indefinite"
+			from="0" to="400" attributeName="cy"
+		/>
+		<animate dur="8s" repeatCount="indefinite"
+			values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0" keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;" attributeName="fill-opacity"
+		/>
+	</circle>
+	<circle style="fill:#FFFFFF;" cx="420.916" r="10.935">
+		<animate dur="4s" repeatCount="indefinite"
+				from="0" to="400" attributeName="cy"
+		/>
+		<animate dur="7.5s" repeatCount="indefinite"
+			values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0" keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;" attributeName="fill-opacity"
+		/>
+	</circle>
+	<circle style="fill:#FFFFFF;" cx="390.74" r="7.935">
+		<animate dur="6.5s" repeatCount="indefinite"
+			from="0" to="400" attributeName="cy"
+		/>
+		<animate dur="8s" repeatCount="indefinite"
+			values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0" keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;" attributeName="fill-opacity"
+		/>
+	</circle>
+	<circle style="fill:#FFFFFF;" cx="95.399" r="4.935">
+		<animate dur="4.5s" repeatCount="indefinite"
+			from="0" to="400" attributeName="cy"
+		/>
+		<animate dur="8s" repeatCount="indefinite"
+			values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0" keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;" attributeName="fill-opacity"
+		/>
+	</circle>
+	<circle style="fill:#FFFFFF;" cx="405.399" r="4.935">
+		<animate dur="4.5s" repeatCount="indefinite"
+			from="0" to="400" attributeName="cy"
+		/>
+		<animate dur="8s" repeatCount="indefinite"
+			values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0" keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;" attributeName="fill-opacity"
+		/>
+	</circle>
+	<circle style="fill:#FFFFFF;" cx="305.399" r="6.935">
+		<animate dur="4.5s" repeatCount="indefinite"
+			from="0" to="400" attributeName="cy"
+		/>
+		<animate dur="8s" repeatCount="indefinite"
+			values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0" keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;" attributeName="fill-opacity"
+		/>
+	</circle>
+	<circle style="fill:#FFFFFF;" cx="405.399" r="7.935">
+		<animate dur="10.5s" repeatCount="indefinite"
+			from="0" to="400" attributeName="cy"
+		/>
+		<animate dur="8s" repeatCount="indefinite"
+			values="1; 1; 1; 0.8; 0.6; 0.4; 0.2; 0" keyTimes="0; 1; 2; 3; 4; 5; 6; 7; 8;" attributeName="fill-opacity"
+		/>
+	</circle>
 	<path style="fill:#FFFFFF;" d="M153.135,369.316c0,21.995,6.916,42.374,18.688,59.092h168.355
 		c11.772-16.718,18.688-37.097,18.688-59.092c0-38.02-20.704-71.141-51.411-88.935c17.448-14.668,28.555-36.621,28.555-61.194
 		c0-44.165-35.818-79.964-80.008-79.964c-44.193,0-80.011,35.8-80.011,79.964c0,24.575,11.107,46.526,28.559,61.194

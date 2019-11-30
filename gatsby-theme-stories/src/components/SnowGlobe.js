@@ -6,10 +6,8 @@ function SnowGlobe() {
   return (
     <div
       css={`
-        grid-column-start: 2;
-        grid-row-start: 3;
-        grid-column-end: 4;
-        grid-row-end: 5;
+        grid-column: 2 / 4;
+        grid-row: 3 / 5;
         display: block;
         margin: 0 auto;
         display: flex;
