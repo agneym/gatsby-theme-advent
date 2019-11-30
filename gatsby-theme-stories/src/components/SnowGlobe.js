@@ -7,7 +7,7 @@ function SnowGlobe() {
     x - containerRef.current.clientWidth,
     y - containerRef.current.clientHeight,
   ];
-  const trans = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
+  const trans = (x, y) => `translate(${x / 30}px,${y / 30 - 10}px)`;
   const [props, set] = useSpring(() => ({
     xy: [0, 0],
     config: { mass: 10, tension: 550, friction: 140 },
@@ -25,6 +25,7 @@ function SnowGlobe() {
       `}
       ref={containerRef}
       onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+      onMouseOut={() => set({ xy: [0, 0] })}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
