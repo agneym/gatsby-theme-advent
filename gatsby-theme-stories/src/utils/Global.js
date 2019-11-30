@@ -17,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: ${props => props.theme.fonts.system};
+    font-family: ${props => props.theme.fonts.display};
     margin: 0;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

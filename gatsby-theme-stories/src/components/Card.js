@@ -8,16 +8,15 @@ const Card = styled.article`
   justify-content: center;
   flex-direction: column;
   position: absolute;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.07) 0px 1px 2px 0px;
-  border-radius: 6px;
+  box-shadow: ${props => props.theme.listing.common.shadow};
+  border-radius: ${props => props.theme.listing.common.radius};
   box-sizing: border-box;
-  font-size: 4rem;
+  font-size: ${props => props.theme.listing.common.fontSize};
 
   ${props =>
     props.side === "back" &&
     `
-    padding: 4rem;
+    padding: ${props.theme.listing.unlocked.backPadding};
     font-size: 1.8rem;
     text-align: justify;
     color: ${props.theme.listing.unlocked.backColor};
