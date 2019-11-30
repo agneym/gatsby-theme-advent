@@ -29,5 +29,7 @@ module.exports = ({ contentPath = "content" }) => ({
         ],
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ],
 });
