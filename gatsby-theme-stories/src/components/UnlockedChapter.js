@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Gift } from "react-feather";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { Location } from "@reach/router";
+import { useSpring, animated } from "react-spring";
 
 const Container = styled.article`
   width: 100%;
@@ -23,19 +24,27 @@ const StyledLink = styled(Link)`
 `;
 
 function UnlockedChapter({ node, num }) {
+  const [flipped, setFlipped] = useState(false);
+  const { transform, opacity } = useSpring({
+    opacity: flipped ? 1 : 0,
+    transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
+    config: { mass: 5, tension: 500, friction: 80 },
+  });
   return (
     <Location>
       {({ location }) => (
         <StyledLink to={`${location.pathname}${node.fields.slug}`}>
           <Container>
-            <div
-              css={`
-                margin-bottom: 1rem;
-              `}
-            >
-              <Gift />
+            <div>
+              <div>
+                <Gift
+                  css={`
+                    margin-bottom: 1rem;
+                  `}
+                />
+              </div>
+              {num}
             </div>
-            {num}
           </Container>
         </StyledLink>
       )}
