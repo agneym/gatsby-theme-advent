@@ -1,20 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
+import UnlockedChapter from "./UnlockedChapter";
+
 const Container = styled.main`
   width: 80%;
-  margin: 0 auto;
+  margin: 5rem auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 6fr;
+  grid-template-rows: 25rem;
+  grid-gap: 2.5rem 5rem;
 `;
 
 function Listing({ data }) {
-  console.log(data);
   return (
     <Container>
       {data.map(({ node }, index) => (
-        <p>{index + 1}</p>
+        <UnlockedChapter key={node.fields.slug} node={node} num={index + 1} />
       ))}
     </Container>
   );

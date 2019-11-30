@@ -1,5 +1,6 @@
 const colors = {
   white: "#ffffff",
+  red: "#ff0012",
 };
 
 const theme = {
@@ -9,6 +10,11 @@ const theme = {
     color: colors.white,
     height: "50vh",
     fontSize: "8rem",
+  },
+  listing: {
+    unlocked: {
+      color: colors.red,
+    },
   },
 };
 
