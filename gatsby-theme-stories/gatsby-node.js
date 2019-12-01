@@ -55,7 +55,7 @@ exports.createPages = async ({ actions, graphql, reporter }, options) => {
           path,
           component: PostTemplate,
           context: {
-            slug: path,
+            slug: post.node.fields.slug,
             previous,
             next,
           },
