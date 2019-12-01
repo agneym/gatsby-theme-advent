@@ -53,7 +53,7 @@ const Share = ({ post }) => {
           <TwitterShareButton
             url={url}
             title={`Read ${post.title}. #DevAdvent2019`}
-            via={`agneymenon`}
+            via={post.author}
             className="social-icon"
           >
             <TwitterIcon size={32} round />
