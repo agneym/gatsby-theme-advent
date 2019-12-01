@@ -1,5 +1,5 @@
 {
-  "name": "@agney/gatsby-theme-stories",
+  "name": "@agney/gatsby-advent-stories",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
@@ -41,5 +41,12 @@
     "gatsby": "^2.18.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agneym/gatsby-theme-advent"
+  },
+  "bugs": {
+    "url": "https://github.com/agneym/gatsby-theme-advent/issues"
   }
 }
