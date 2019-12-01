@@ -18,9 +18,7 @@ export const pageQuery = graphql`
     }
     site {
       siteMetadata {
-        social {
-          twitter
-        }
+        author
       }
     }
   }
@@ -29,7 +27,7 @@ export const pageQuery = graphql`
 function Post({ data, pageContext }) {
   const { frontmatter, html, excerpt } = data.markdownRemark;
   const { previous, next, basePath } = pageContext;
-  const { title } = data.site.siteMetadata;
+  const { author } = data.site.siteMetadata;
 
   return (
     <Layout>
@@ -54,7 +52,7 @@ function Post({ data, pageContext }) {
           post={{
             title: frontmatter.title,
             excerpt: excerpt,
-            author: title,
+            author,
           }}
         />
 
