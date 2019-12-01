@@ -14,10 +14,10 @@ A simple and easy advent theme using Gatsby and Styled Components. Write your po
 In your `gatsby-config.js`:
 
 ```bash
-npm i --save-dev @agney/gatsby-theme-advent
+npm i @agney/gatsby-theme-advent
 
 # OR #
-yarn add --dev @agney/gatsby-theme-advent
+yarn add @agney/gatsby-theme-advent
 ```
 
 ```js
