@@ -20,7 +20,9 @@ npm i @agney/gatsby-theme-advent
 yarn add @agney/gatsby-theme-advent
 ```
 
-```js
+You can start using it by adding the following to `gatsby-config.js`
+
+```javascript
 module.exports = {
   plugins: [
     {
@@ -61,7 +63,7 @@ The post will be published only if the frontmatter `published` is `true`.
 
 Create a `theme.js` file at `src/@agney/gatsby-theme-advent/utils/theme.js`
 
-```js
+```javascript
 const theme = {};
 
 export default theme;
@@ -71,7 +73,7 @@ export default theme;
 
 If you need to keep existing theme and edit some of the values:
 
-```js
+```javascript
 import merge from "lodash.merge";
 import theme from "@agney/gatsby-theme-advent";
 
