@@ -1,11 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `The Thing`,
-    description: `A techxploration.`,
-    author: `Agney Menon`,
-    social: {
-      twitter: `agneymenon`,
-    },
+    title: `The Blog Name`,
+    description: `A description that fits the case.`,
+    author: `agneymenon`,
   },
   plugins: [
     {

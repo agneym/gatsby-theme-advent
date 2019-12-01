@@ -46,5 +46,6 @@ module.exports = ({ contentPath = "content", assetPath = "assets" }) => ({
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
   ],
 });

@@ -1,5 +1,5 @@
 import React from "react";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 const detailsQuery = graphql`
@@ -19,15 +19,17 @@ function SEO({
   lang = "en",
   meta = [],
   keywords = [],
-  title,
+  title = "",
 }) {
   const data = useStaticQuery(detailsQuery);
   const metaDescription = description || data.site.siteMetadata.description;
+
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
+      defaultTitle={data.site.siteMetadata.title}
       title={title}
       titleTemplate={`%s | ${data.site.siteMetadata.title}`}
       meta={[
@@ -73,7 +75,9 @@ function SEO({
             : []
         )
         .concat(meta)}
-    />
+    >
+      <title>{title}</title>
+    </Helmet>
   );
 }
 
