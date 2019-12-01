@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Cover from "../components/Cover";
 import Listing from "../components/Listing";
 import SEO from "../components/SEO";
+import NewsLetter from "../components/NewsLetter";
 
 const pageQuery = graphql`
   query getAllPosts {
@@ -35,6 +36,7 @@ function Landing({ pageContext }) {
       <SEO />
       <Cover />
       <Listing data={edges} base={basePath} />
+      <NewsLetter />
     </Layout>
   );
 }
