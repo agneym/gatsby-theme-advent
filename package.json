@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "yarn workspace example develop",
-    "build": "yarn workspace example build"
+    "build": "yarn workspace example build",
+    "release": "yarn workspace @agney/gatsby-theme-advent release"
   },
   "workspaces": [
     "gatsby-theme-advent",
