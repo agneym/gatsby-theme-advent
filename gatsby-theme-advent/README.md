@@ -1,6 +1,6 @@
 # Gatsby Advent Theme
 
-A simple and easy advent theme using Gatsby and Styled Components.
+A simple and easy advent theme using Gatsby and Styled Components. Write your posts with Markdown.
 
 <a href="https://badge.fury.io/js/%40agney%2Fgatsby-theme-advent"><img src="https://badge.fury.io/js/%40agney%2Fgatsby-theme-advent.svg" alt="npm version" height="18"></a>
 <a href="#badge">
@@ -90,7 +90,7 @@ export default merge({}, theme, {
 
 This theme makes use of [Yarn Workspaces](https://yarnpkg.com/lang/en/docs/workspaces/)
 
-```
-yarn
+```bash
+yarn  # Install packages and dependencies
 yarn dev
 ```

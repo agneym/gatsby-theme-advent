@@ -9,8 +9,17 @@
 
 1. example
 
-Contains a starter and demo that installs and uses `@agney/gatsby-theme-advent`.
+   Contains a starter and demo that installs and uses [`@agney/gatsby-theme-advent`](https://www.npmjs.com/package/@agney/gatsby-theme-advent).
 
 2. gatsby-theme-advent
 
-Contains the source for theme and [documentation](https://github.com/agneym/gatsby-theme-advent/tree/master/gatsby-theme-advent)
+   Contains the source for theme and [documentation](https://github.com/agneym/gatsby-theme-advent/tree/master/gatsby-theme-advent)
+
+## Contributing
+
+This theme makes use of [Yarn Workspaces](https://yarnpkg.com/lang/en/docs/workspaces/)
+
+```bash
+yarn  # Install packages and dependencies
+yarn dev
+```
