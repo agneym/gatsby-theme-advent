@@ -1,5 +1,22 @@
 import React, { memo, useRef } from "react";
 import { useSpring, animated } from "react-spring";
+import styled from "styled-components";
+import media from "../utils/media";
+
+const Container = styled.div`
+  grid-column: 2 / 4;
+  grid-row: 3 / 5;
+  display: block;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 60%;
+
+  ${media.phone`
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
+  `}
+`;
 
 function SnowGlobe() {
   const containerRef = useRef(null);
@@ -13,16 +30,7 @@ function SnowGlobe() {
     config: { mass: 10, tension: 550, friction: 140 },
   }));
   return (
-    <div
-      css={`
-        grid-column: 2 / 4;
-        grid-row: 3 / 5;
-        display: block;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        width: 60%;
-      `}
+    <Container
       ref={containerRef}
       onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
       onMouseOut={() => set({ xy: [0, 0] })}
@@ -178,7 +186,7 @@ function SnowGlobe() {
           d="M432.533 159.66c-4.906 0-9.607-2.776-11.83-7.512-18.336-39.03-50.042-70.381-89.279-88.278-6.563-2.994-9.456-10.741-6.464-17.305 2.994-6.564 10.743-9.454 17.305-6.463 44.864 20.464 81.117 56.313 102.081 100.94 3.068 6.529.261 14.308-6.268 17.375a13.002 13.002 0 01-5.545 1.243z"
         ></path>
       </svg>
-    </div>
+    </Container>
   );
 }
 

@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/Layout";
 import Cover from "../components/Cover";
 import Listing from "../components/Listing";
+import SEO from "../components/SEO";
 
 const pageQuery = graphql`
   query getAllPosts {
@@ -30,6 +31,7 @@ function Landing() {
 
   return (
     <Layout>
+      <SEO />
       <Cover />
       <Listing data={edges} />
     </Layout>

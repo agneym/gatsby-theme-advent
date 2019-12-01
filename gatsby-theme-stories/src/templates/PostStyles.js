@@ -9,6 +9,8 @@ export const Container = styled.article`
 
   ${media.phone`
     margin-top: 4rem;
+    width: 90%;
+    margin: 3rem auto 0;
   `}
 
   p {

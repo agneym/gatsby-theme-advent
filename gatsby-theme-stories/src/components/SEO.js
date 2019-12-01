@@ -14,7 +14,13 @@ const detailsQuery = graphql`
   }
 `;
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({
+  description = "",
+  lang = "en",
+  meta = [],
+  keywords = [],
+  title,
+}) {
   const data = useStaticQuery(detailsQuery);
   const metaDescription = description || data.site.siteMetadata.description;
   return (

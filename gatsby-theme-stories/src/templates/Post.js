@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import { Container, Header, Title, LinkList } from "./PostStyles";
 import AnimatedLink from "../components/AnimatedLink";
 import Share from "../components/share";
+import SEO from "../components/SEO";
 
 export const pageQuery = graphql`
   query getPostBySlug($slug: String!) {
@@ -31,6 +32,7 @@ function Post({ data, pageContext }) {
 
   return (
     <Layout>
+      <SEO />
       <Container>
         <Header>
           <Title>{frontmatter.title}</Title>

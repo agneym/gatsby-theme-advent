@@ -4,6 +4,7 @@ import styled from "styled-components";
 import UnlockedChapter from "./UnlockedChapter";
 import LockedCard from "./LockedCard";
 import SnowGlobe from "./SnowGlobe";
+import media from "../utils/media";
 
 const Container = styled.main`
   width: 80%;
@@ -12,6 +13,13 @@ const Container = styled.main`
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 25rem;
   grid-gap: 2.5rem 5rem;
+
+  ${media.phone`
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem 2rem;
+    width: 90%;
+    margin-top: 2rem;
+  `}
 `;
 
 function Listing({ data }) {

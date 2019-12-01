@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import Image from "gatsby-image";
+import media from "../utils/media";
 
 const coverImageQuery = graphql`
   query getCoverImage {
@@ -21,6 +22,10 @@ const Header = styled.header`
   height: ${props => props.theme.cover.height};
   overflow: hidden;
   position: relative;
+
+  ${media.phone`
+    height: unset;
+  `}
 `;
 
 const Heading = styled.h1`
@@ -33,6 +38,10 @@ const Heading = styled.h1`
   margin: 0;
   text-align: center;
   color: ${props => props.theme.colors.white};
+
+  ${media.phone`
+    font-size: 5rem;
+  `}
 `;
 
 function Cover() {
