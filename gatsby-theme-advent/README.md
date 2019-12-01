@@ -27,7 +27,7 @@ module.exports = {
       resolve: `@agney/gatsby-theme-advent`,
       options: {
         contentPath: "content", // Tell the theme where your markdown files are.
-        assetPath: "assets",
+        assetPath: "assets", // Tell the there where your cover image is.
         basePath: "/december", // Tell the theme which URL to render the theme at.
       },
     },
@@ -35,7 +35,27 @@ module.exports = {
 };
 ```
 
+## Options
+
+| Options     |                     Description                     | Required | Default |
+| ----------- | :-------------------------------------------------: | :------: | :-----: |
+| contentPath |        This where markdown files are hosted         |  false   | content |
+| assetPath   |        This is where your cover image can be        |  false   | assets  |
+| basePath    | This is where URL where the theme is to be rendered |  false   |         |
+
 ## Adding the Data
+
+Add markdown files with frontmatter:
+
+```
+---
+title: "This is the first advent gift"
+date: "2019-12-01T22:12:03.284Z"
+published: true
+---
+```
+
+The post will be published only if the frontmatter `published` is `true`.
 
 ## Changing the theme
 

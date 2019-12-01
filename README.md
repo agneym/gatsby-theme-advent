@@ -1,1 +1,0 @@
-/home/ghost/code/run-throughs/gatsby-theme-stories/gatsby-theme-stories/README.md
