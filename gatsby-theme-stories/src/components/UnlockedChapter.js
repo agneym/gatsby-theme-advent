@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Gift } from "react-feather";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { Location } from "@reach/router";
 import { useSpring, animated } from "react-spring";
 
 import Card from "./Card";
@@ -18,7 +17,7 @@ const StyledLink = styled(Link)`
   color: ${props => props.theme.listing.unlocked.frontColor};
 `;
 
-function UnlockedChapter({ node, num }) {
+function UnlockedChapter({ node, num, base }) {
   const [flipped, setFlipped] = useState(true);
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
@@ -27,36 +26,32 @@ function UnlockedChapter({ node, num }) {
   });
   const AnimatedContent = animated(Card);
   return (
-    <Location>
-      {({ location }) => (
-        <StyledLink to={`${location.pathname}${node.fields.slug}`}>
-          <Container
-            onMouseOver={() => setFlipped(false)}
-            onMouseOut={() => setFlipped(true)}
-          >
-            <AnimatedContent
-              style={{
-                opacity,
-                transform: transform.interpolate(t => `${t} rotateX(180deg)`),
-              }}
-            >
-              <Gift
-                css={`
-                  margin-bottom: 1rem;
-                `}
-              />
-              {num}
-            </AnimatedContent>
-            <AnimatedContent
-              style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
-              side="back"
-            >
-              <p>{node.frontmatter.title}</p>
-            </AnimatedContent>
-          </Container>
-        </StyledLink>
-      )}
-    </Location>
+    <StyledLink to={`${base}${node.fields.slug}`}>
+      <Container
+        onMouseOver={() => setFlipped(false)}
+        onMouseOut={() => setFlipped(true)}
+      >
+        <AnimatedContent
+          style={{
+            opacity,
+            transform: transform.interpolate(t => `${t} rotateX(180deg)`),
+          }}
+        >
+          <Gift
+            css={`
+              margin-bottom: 1rem;
+            `}
+          />
+          {num}
+        </AnimatedContent>
+        <AnimatedContent
+          style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
+          side="back"
+        >
+          <p>{node.frontmatter.title}</p>
+        </AnimatedContent>
+      </Container>
+    </StyledLink>
   );
 }
 

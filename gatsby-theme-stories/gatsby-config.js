@@ -1,4 +1,8 @@
-module.exports = ({ contentPath = "content", assetPath = "assets" }) => ({
+module.exports = ({
+  contentPath = "content",
+  basePath = "",
+  assetPath = "assets",
+}) => ({
   siteMetadata: {
     title: `The Mindless`,
     description: `A techxploration.`,

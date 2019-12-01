@@ -22,7 +22,7 @@ const Container = styled.main`
   `}
 `;
 
-function Listing({ data }) {
+function Listing({ data, base }) {
   const [lockedCards, setLockedCards] = useState([]);
   useEffect(() => {
     const unlockedCards = data.length;
@@ -37,7 +37,12 @@ function Listing({ data }) {
   return (
     <Container>
       {data.map(({ node }, index) => (
-        <UnlockedChapter key={node.fields.slug} node={node} num={index + 1} />
+        <UnlockedChapter
+          key={node.fields.slug}
+          node={node}
+          num={index + 1}
+          base={base}
+        />
       ))}
       {lockedCards.map(cardNum => (
         <LockedCard key={cardNum} num={cardNum} />

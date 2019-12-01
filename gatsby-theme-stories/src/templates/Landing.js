@@ -25,15 +25,16 @@ const pageQuery = graphql`
   }
 `;
 
-function Landing() {
+function Landing({ pageContext }) {
   const data = useStaticQuery(pageQuery);
   const edges = data.allMarkdownRemark.edges;
+  const basePath = pageContext.basePath;
 
   return (
     <Layout>
       <SEO />
       <Cover />
-      <Listing data={edges} />
+      <Listing data={edges} base={basePath} />
     </Layout>
   );
 }

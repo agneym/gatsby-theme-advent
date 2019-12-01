@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import { Container, Header, Title, LinkList } from "./PostStyles";
+import { Container, Header, Title, LinkList } from "../components/PostStyles";
 import AnimatedLink from "../components/AnimatedLink";
 import Share from "../components/share";
 import SEO from "../components/SEO";
@@ -32,7 +32,7 @@ function Post({ data, pageContext }) {
 
   return (
     <Layout>
-      <SEO />
+      <SEO title={frontmatter.title} description={excerpt} />
       <Container>
         <Header>
           <Title>{frontmatter.title}</Title>

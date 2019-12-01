@@ -32,10 +32,13 @@ const query = `{
 }`;
 
 exports.createPages = async ({ actions, graphql, reporter }, options) => {
-  const basePath = options.basePath || "/";
+  const basePath = options.basePath;
   actions.createPage({
-    path: basePath,
+    path: basePath || "/",
     component: ListingTemplate,
+    context: {
+      basePath,
+    },
   });
   return new Promise(async (resolve, reject) => {
     const result = await graphql(query).then(result => {
