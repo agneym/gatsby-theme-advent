@@ -36,7 +36,12 @@ function Post({ data, pageContext }) {
             <span>Posted on {frontmatter.date}</span>
           </sub>
         </Header>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div
+          css={`
+            margin: 5rem 0;
+          `}
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
         <Share
           post={{
             title: frontmatter.title,

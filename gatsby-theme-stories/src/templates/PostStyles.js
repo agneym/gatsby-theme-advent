@@ -119,30 +119,16 @@ export const Container = styled.article`
       background-color: inherit;
     }
   }
-`;
 
-export const Pre = styled.pre`
-  text-align: left;
-  margin: 1em 0;
-  overflow-x: auto;
-
-  & .token-line {
-    line-height: 1.3em;
-    height: 1.3em;
+  code {
+    &.language-text {
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      text-shadow: none;
+      color: #000000;
+    }
   }
-
-  &[class*="language-"] {
-    border: 0;
-    padding: 1.5rem;
-    border-radius: 0;
-  }
-`;
-
-export const LineNo = styled.span`
-  display: inline-block;
-  width: 2em;
-  user-select: none;
-  opacity: 0.3;
 `;
 
 export const Header = styled.header`
