@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `The Mindless`,
+    title: `The Thing`,
     description: `A techxploration.`,
     author: `Agney Menon`,
     social: {
