@@ -11,7 +11,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
-        date
+        date(formatString: "MMMM DD, YYYY")
       }
       excerpt
       html
@@ -21,7 +21,8 @@ export const pageQuery = graphql`
 
 function Post({ data, pageContext }) {
   const { frontmatter, html, excerpt } = data.markdownRemark;
-  const { previous, next } = pageContext;
+  const { previous, next, basePath } = pageContext;
+
   return (
     <Layout>
       <Container>
@@ -43,11 +44,12 @@ function Post({ data, pageContext }) {
             author: "agneymenon",
           }}
         />
+
         <LinkList>
           <li>
             {previous && (
               <AnimatedLink
-                to={previous.fields.slug}
+                to={basePath + previous.fields.slug}
                 rel="prev"
                 direction="rtl"
               >
@@ -57,7 +59,11 @@ function Post({ data, pageContext }) {
           </li>
           <li>
             {next && (
-              <AnimatedLink to={next.fields.slug} rel="next" direction="ltr">
+              <AnimatedLink
+                to={basePath + next.fields.slug}
+                rel="next"
+                direction="ltr"
+              >
                 {next.frontmatter.title} →
               </AnimatedLink>
             )}
