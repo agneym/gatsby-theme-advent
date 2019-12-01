@@ -4,6 +4,7 @@
   "main": "index.js",
   "author": "Agney Menon <agney@outlook.in> (@agneymenon)",
   "license": "MIT",
+  "access": "public",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
