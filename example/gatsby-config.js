@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: `@agney/gatsby-theme-stories`,
       options: {
-        basePath: "/december",
+        basePath: "/",
       },
     },
   ],
