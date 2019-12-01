@@ -10,7 +10,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@agney/gatsby-theme-stories": "*",
+    "@agney/gatsby-theme-advent": "*",
     "gatsby": "^2.18.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"

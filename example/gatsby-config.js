@@ -6,7 +6,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `@agney/gatsby-theme-stories`,
+      resolve: `@agney/gatsby-theme-advent`,
       options: {
         basePath: "",
       },
