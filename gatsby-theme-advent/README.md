@@ -1,8 +1,8 @@
-# Gatsby Advent Theme Workspace
+# Gatsby Advent Theme
 
 A simple and easy advent theme using Gatsby and Styled Components.
 
-<a href="https://badge.fury.io/js/%40agney%2Fgatsby-theme-wedding"><img src="https://badge.fury.io/js/%40agney%2Fgatsby-theme-wedding.svg" alt="npm version" height="18"></a>
+<a href="https://badge.fury.io/js/%40agney%2Fgatsby-theme-advent"><img src="https://badge.fury.io/js/%40agney%2Fgatsby-theme-advent.svg" alt="npm version" height="18"></a>
 <a href="#badge">
 <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square">
 </a>
@@ -67,7 +67,7 @@ const theme = {};
 export default theme;
 ```
 
-[See full properties here](https://github.com/agneym/gatsby-wedding-theme/blob/master/gatsby-theme-advent/src/utils/theme.js)
+[See full properties here](https://github.com/agneym/gatsby-theme-advent/blob/master/gatsby-theme-advent/src/utils/theme.js)
 
 If you need to keep existing theme and edit some of the values:
 
