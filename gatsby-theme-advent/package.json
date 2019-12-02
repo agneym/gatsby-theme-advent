@@ -51,5 +51,10 @@
   },
   "bugs": {
     "url": "https://github.com/agneym/gatsby-theme-advent/issues"
-  }
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin"
+  ]
 }
